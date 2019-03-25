@@ -5,7 +5,7 @@ import "errors"
 // Get generates a random string
 func (r *RandString) Get(n int) (string, error) {
 	if r.src == nil {
-		return "", errors.New("Random source in nil")
+		return "", errors.New("Random source is nil")
 	}
 	if r.bucketLength == 0 {
 		return "", errors.New("Bucket is empty")
